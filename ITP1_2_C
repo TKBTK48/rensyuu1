@@ -1,0 +1,38 @@
+using System;
+
+namespace rensyuu1
+{
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string ddd = Console.ReadLine();
+            string[] vb = ddd.Split(new char[] { ' ' });
+            int a = int.Parse(vb[0]);
+            int b = int.Parse(vb[1]);
+            int c = int.Parse(vb[2]);
+            switch (obj)
+            {
+                case a > b:
+                    int d = a;
+                    int a = b;
+                    int b = d;
+                    break;
+                case b > c:
+                    int e = b;
+                    int b = c;
+                    int c = e;
+                    break;
+                case a > b:
+                    int d = a;
+                    int a = b;
+                    int b = d;
+                    break;
+
+            }
+            Console.WriteLine(a,b,c);
+
+        }
+    }
+}
