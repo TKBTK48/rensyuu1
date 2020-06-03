@@ -1,0 +1,17 @@
+using System;
+using System.Runtime.CompilerServices;
+
+namespace rensyuu1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string str = Console.ReadLine();
+            string[] strs = str.Split(new char[] { ' ' });
+            int a = int.Parse(strs[0]);
+            int b = int.Parse(strs[1]);
+            Console.WriteLine((a * b) + " " + ((a + b) * 2));
+        }
+    }
+}
