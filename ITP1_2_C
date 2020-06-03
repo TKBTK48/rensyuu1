@@ -1,38 +1,21 @@
 using System;
+using System.Linq;
 
-namespace rensyuu1
+namespace test01
 {
-
     class Program
     {
         static void Main(string[] args)
         {
-            string ddd = Console.ReadLine();
-            string[] vb = ddd.Split(new char[] { ' ' });
-            int a = int.Parse(vb[0]);
-            int b = int.Parse(vb[1]);
-            int c = int.Parse(vb[2]);
-            switch (obj)
-            {
-                case a > b:
-                    int d = a;
-                    int a = b;
-                    int b = d;
-                    break;
-                case b > c:
-                    int e = b;
-                    int b = c;
-                    int c = e;
-                    break;
-                case a > b:
-                    int d = a;
-                    int a = b;
-                    int b = d;
-                    break;
+            string line = System.Console.ReadLine();
 
-            }
-            Console.WriteLine(a,b,c);
+            int[] nums = line.Split(' ').Select(x => int.Parse(x)).OrderBy(x => x).ToArray();
 
+            int a = nums[0];
+            int b = nums[1];
+            int c = nums[2];
+
+            Console.WriteLine("{0} {1} {2}", a, b, c);
         }
     }
 }
