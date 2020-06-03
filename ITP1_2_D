@@ -13,13 +13,17 @@ namespace rensyuu1
             int x = int.Parse(vs[2]);
             int y = int.Parse(vs[3]);
             int r = int.Parse(vs[4]);
-            if (y + r <= H && x + r <= W)
+            if (y + r > H | x + r > W)
             {
-                Console.WriteLine("Yes");
+                Console.WriteLine("No");
+            }
+            else if (x < r | y < r)
+            {
+                Console.WriteLine("No");
             }
             else
             {
-                Console.WriteLine("No");
+                Console.WriteLine("Yes");
             }
         }
     }
