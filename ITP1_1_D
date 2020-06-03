@@ -1,0 +1,17 @@
+using System;
+
+namespace rensyuu1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int S = int.Parse(Console.ReadLine());
+            int h = S / 3600;
+            int M = S - 3600 * h;
+            int m = M / 60;
+            int s = M - 60 * m;
+            Console.WriteLine(h + ":" + m + ":" + s);
+        }
+    }
+}
