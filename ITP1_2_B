@@ -1,0 +1,25 @@
+using System;
+
+namespace rensyuu1
+{
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string ccc = Console.ReadLine();
+            string[] vbs = ccc.Split(new char[] { ' ' });
+            int a = int.Parse(vbs[0]);
+            int b = int.Parse(vbs[1]);
+            int c = int.Parse(vbs[2]);
+            if (a < b && b < c)
+            {
+                Console.WriteLine("Yes");
+            }
+            else
+            {
+                Console.WriteLine("No");
+            }
+        }
+    }
+}
