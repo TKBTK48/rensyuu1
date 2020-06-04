@@ -1,0 +1,18 @@
+using System;
+
+namespace rensyuu1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string xx = Console.ReadLine();
+            int r = int.Parse(xx);
+            double S = r * r * 3.141592653589;
+            double L = 2 * r * 3.141592653589;
+            string text1 = S.ToString("F6");
+            string text2 = L.ToString("F6");
+            Console.WriteLine("{0} {1}", text1, text2);
+        }
+    }
+}
