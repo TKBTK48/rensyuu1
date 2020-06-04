@@ -1,0 +1,20 @@
+using System;
+
+namespace rensyuu1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string qq = Console.ReadLine();
+            string[] aa = qq.Split(new char[] { ' ' });
+            int a = int.Parse(aa[0]);
+            int b = int.Parse(aa[1]);
+            int d = a / b;
+            int r = a % b;
+            double f = 1.00000 * a / b;
+            string text = f.ToString("F5");
+            Console.WriteLine("{0} {1} {2}", d, r, text);
+        }
+    }
+}
