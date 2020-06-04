@@ -11,7 +11,7 @@ namespace rensyuu1
             {
                 string st = Console.ReadLine();
                 int x = int.Parse(st);
-                if (x == 0 | x >= 10000 | i >= 100000)
+                if (x == 0)
                 {
                     break;
                 }
