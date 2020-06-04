@@ -1,0 +1,47 @@
+using System;
+using System.ComponentModel;
+using System.Windows.Markup;
+
+namespace rensyuu1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i = 1;
+            while (true)
+            {
+                string ff = Console.ReadLine();
+                string[] gg = ff.Split(new char[] { ' ' });
+                int a = int.Parse(gg[0]);
+                int b = int.Parse(gg[2]);
+                char op = Convert.ToChar(gg[1]);
+                if (op == '?')
+                {
+                    break;
+                }
+                else if (op == '+')
+                {
+                    int c = a + b;
+                    Console.WriteLine("{0}", c);
+                }
+                else if (op == '-')
+                {
+                    int c = a - b;
+                    Console.WriteLine("{0}", c);
+                }
+                else if (op == '*')
+                {
+                    int c = a * b;
+                    Console.WriteLine("{0}", c);
+                }
+                else if (op == '/')
+                {
+                    int c = a / b;
+                    Console.WriteLine("{0}", c);
+                }
+                i++;
+            }
+        }
+    }
+}
