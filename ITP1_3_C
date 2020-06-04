@@ -1,0 +1,41 @@
+using System;
+
+namespace rensyuu1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i = 1;
+            while (true)
+            {
+                string lss = Console.ReadLine();
+                string[] ss = lss.Split(new char[] { ' ' });
+                int x = int.Parse(ss[0]);
+                int y = int.Parse(ss[1]);
+
+                if (x == 0 && y == 0)
+                {
+                    break;
+                }
+
+                else if (x > y)
+
+                {
+                    int z = y;
+                    y = x;
+                    x = z;
+                    Console.WriteLine("{0} {1}", x, y);
+                }
+
+                else
+                {
+                    Console.WriteLine("{0} {1}", x, y);
+                }
+
+                i++;
+
+                }
+            }
+        }
+    }
