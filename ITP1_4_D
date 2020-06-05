@@ -1,0 +1,24 @@
+using System.Linq;
+using System;
+
+public class hello
+{
+    public static void Main()
+    {
+        //前後の空白を除き、int型で読み込む
+        var n = int.Parse(Console.ReadLine().Trim());
+        
+        //ｎ個の配列arrを作成
+        var arr = new long[n];
+        
+        //前後の空白を除き、空白を区切りとして、文字列lineとして順番に読み込む
+        string[] line = Console.ReadLine().Trim().Split(' ');
+
+        //配列arrにint型に変換した配列lineを、一個ずつ代入
+        for (int i = 0; i < n; i++) arr[i] = int.Parse(line[i]);
+
+        //最小、最大、合計を出力
+        Console.WriteLine("{0} {1} {2}", arr.Min(), arr.Max(), arr.Sum());
+
+    }
+}
