@@ -16,11 +16,6 @@ namespace rensyuu1
                 var arr = new string[W];
                 for (int i = 0; i < W; i++) arr[i] = "♯";
                 Console.WriteLine(arr);
-                Console.Write("");
-                for (int i = 0; i < W; ++i)
-                {
-                    Console.Write(arr[i]);
-                }
             }
             n1++;
         }
