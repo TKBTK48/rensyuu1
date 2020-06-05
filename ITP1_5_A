@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel;
 
 namespace rensyuu1
 {
@@ -10,14 +11,20 @@ namespace rensyuu1
             string[] se2 = se1.Split(new char[] { ' ' });
             int H = int.Parse(se2[0]);
             int W = int.Parse(se2[1]);
+            var arr = new string('#',W);
             int n1 = 0;
-            while(n1 >= H)
+            while (true)
             {
-                var arr = new string[W];
-                for (int i = 0; i < W; i++) arr[i] = "♯";
                 Console.WriteLine(arr);
+                if(n1==H-1)
+                {
+                    break;
+                }
+                n1++;
             }
-            n1++;
+            
+
+        
         }
     }
 
