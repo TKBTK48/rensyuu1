@@ -9,61 +9,56 @@ namespace rensyuu1
             int n = int.Parse(Console.ReadLine());
             string xxx = Console.ReadLine();
             string[] xx = xxx.Split(new char[] { ' ' });
-            while (true)
+            int max = int.Parse(xx[0]);
+            int min = int.Parse(xx[0]);
+            int sum = int.Parse(xx[0]);
+            int no1 = 0;
+            int no2 = 0;
+            int no3 = 0;
+            while (no1 <= n - 2)
             {
                 ///最大
-                int no1 = 0;
-
-                int max = int.Parse(xx[no1]);
+                if (no1 == 0)
+                {
+                    max = int.Parse(xx[no1]);
+                }
                 int max2 = int.Parse(xx[no1 + 1]);
                 if (max2 > max)
                 {
                     max = max2;
                 }
-                else if (no1 == n - 1)
-                {
-                    break;
-                }
                 no1++;
-                Console.WriteLine("{0}",max);
-                break;
             }
-            while (true)
+            while (no2 <= n - 2)
             {
                 ///最小
-                int no2 = 0;
-                int min = int.Parse(xx[no2]);
+                if (no2 == 0)
+                {
+                    sum = int.Parse(xx[no2]);
+                }
+
                 int min2 = int.Parse(xx[no2 + 1]);
                 if (min2 < min)
                 {
                     min = min2;
                 }
-                else if (no2 == n - 1)
-                {
-                    break;
-                }
                 no2++;
-                Console.WriteLine("{0}", min);
-                break;
             }
-            while (true)
+            while (no3 <= n - 2)
             {
                 ///合計
-                int no3 = 0;
-                int sum = int.Parse(xx[no3]);
+                if (no3 == 0)
+                {
+                    sum = int.Parse(xx[no3]);
+                }
                 int sum2 = int.Parse(xx[no3 + 1]);
                 sum = sum + sum2;
-                if (no3 == n - 1)
-                {
-                    break;
-                }
                 no3++;
-                Console.WriteLine("{0}",sum);
-                break;
             }
-                
-            }
-
+            Console.WriteLine("{0} {1} {2}", min, max, sum);
 
         }
+
+
     }
+}
