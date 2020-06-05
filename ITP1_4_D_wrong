@@ -1,0 +1,69 @@
+using System;
+
+namespace rensyuu1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+            string xxx = Console.ReadLine();
+            string[] xx = xxx.Split(new char[] { ' ' });
+            while (true)
+            {
+                ///最大
+                int no1 = 0;
+
+                int max = int.Parse(xx[no1]);
+                int max2 = int.Parse(xx[no1 + 1]);
+                if (max2 > max)
+                {
+                    max = max2;
+                }
+                else if (no1 == n - 1)
+                {
+                    break;
+                }
+                no1++;
+                Console.WriteLine("{0}",max);
+                break;
+            }
+            while (true)
+            {
+                ///最小
+                int no2 = 0;
+                int min = int.Parse(xx[no2]);
+                int min2 = int.Parse(xx[no2 + 1]);
+                if (min2 < min)
+                {
+                    min = min2;
+                }
+                else if (no2 == n - 1)
+                {
+                    break;
+                }
+                no2++;
+                Console.WriteLine("{0}", min);
+                break;
+            }
+            while (true)
+            {
+                ///合計
+                int no3 = 0;
+                int sum = int.Parse(xx[no3]);
+                int sum2 = int.Parse(xx[no3 + 1]);
+                sum = sum + sum2;
+                if (no3 == n - 1)
+                {
+                    break;
+                }
+                no3++;
+                Console.WriteLine("{0}",sum);
+                break;
+            }
+                
+            }
+
+
+        }
+    }
