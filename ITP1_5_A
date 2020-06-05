@@ -1,0 +1,29 @@
+using System;
+
+namespace rensyuu1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string se1 = Console.ReadLine();
+            string[] se2 = se1.Split(new char[] { ' ' });
+            int H = int.Parse(se2[0]);
+            int W = int.Parse(se2[1]);
+            int n1 = 0;
+            while(n1 >= H)
+            {
+                var arr = new string[W];
+                for (int i = 0; i < W; i++) arr[i] = "♯";
+                Console.WriteLine(arr);
+                Console.Write("");
+                for (int i = 0; i < W; ++i)
+                {
+                    Console.Write(arr[i]);
+                }
+            }
+            n1++;
+        }
+    }
+
+}
