@@ -1,5 +1,4 @@
 using System;
-using System.ComponentModel;
 
 namespace rensyuu1
 {
@@ -7,25 +6,21 @@ namespace rensyuu1
     {
         static void Main(string[] args)
         {
-            string se1 = Console.ReadLine();
-            string[] se2 = se1.Split(new char[] { ' ' });
-            int H = int.Parse(se2[0]);
-            int W = int.Parse(se2[1]);
-            var arr = new string('#',W);
-            int n1 = 0;
+
+            int i = 1;
             while (true)
             {
-                Console.WriteLine(arr);
-                if(n1==H-1)
+                int x = int.Parse(Console.ReadLine());
+                if (x == 0)
                 {
                     break;
                 }
-                n1++;
-            }
-            
 
-        
+                Console.WriteLine("Case {0}: {1}", i, x);
+                i++;
+
+
+            }
         }
     }
-
 }
