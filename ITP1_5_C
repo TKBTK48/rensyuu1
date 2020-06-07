@@ -1,0 +1,69 @@
+using System;
+using System.Linq;
+
+namespace rensyuu1
+{
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            while (true)
+            {
+                string[] numb = Console.ReadLine().Trim().Split(' ');
+                int h = int.Parse(numb[0]);
+                int w = int.Parse(numb[1]);
+                if (h == 0 && w == 0) break;
+                int w1 = w / 2;
+                int h1 = h / 2;
+                string str1 = string.Concat(Enumerable.Repeat("#.", w1));
+                string str2 = string.Concat(Enumerable.Repeat(".#", w1));
+                if (w % 2 == 0)
+                {
+                    if (h % 2 == 0)
+                    {
+                        for (int i1 = 0; i1 < h1; i1++)
+                        {
+                            Console.WriteLine(str1);
+                            Console.WriteLine(str2);
+                        }
+                    }
+                    else if (h % 2 == 1)
+                    {
+                        for (int i2 = 0; i2 < h1; i2++)
+                        {
+                            Console.WriteLine(str1);
+                            Console.WriteLine(str2);
+                        }
+                        Console.WriteLine(str1);
+                    }
+                }
+
+
+                if (w % 2 == 1)
+                {
+                    if (h % 2 == 0)
+                    {
+                        for (int i1 = 0; i1 < h1; i1++)
+                        {
+                            Console.WriteLine("{0}#", str1);
+                            Console.WriteLine("{0}.", str2);
+                        }
+                    }
+                    else if (h % 2 == 1)
+                    {
+                        for (int i2 = 0; i2 < h1; i2++)
+                        {
+                            Console.WriteLine("{0}#", str1);
+                            Console.WriteLine("{0}.", str2);
+                        }
+                        Console.WriteLine("{0}#", str1);
+                    }
+
+                }
+                Console.WriteLine();
+            }
+
+        }
+    }
+}
