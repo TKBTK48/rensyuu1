@@ -1,0 +1,29 @@
+using System;
+
+namespace rensyuu1
+{
+    class Program
+    {
+        public static void Main()
+        {
+            while (true)
+            {
+                string[] num = Console.ReadLine().Trim().Split(' ');
+                int h = int.Parse(num[0]);
+                int w = int.Parse(num[1]);
+                if (h == 0 && w == 0) break;
+                string str1 = new string('#',w);
+                string str2 = new string('.',w-2);
+                Console.WriteLine(str1);
+                for(int i =0; i < h-2; i++)
+                {
+                    Console.WriteLine("#{0}#",str2);
+                }
+                Console.WriteLine(str1);
+                Console.WriteLine();
+
+            }
+
+        }
+    }
+}
